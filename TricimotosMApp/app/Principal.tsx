@@ -1,19 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Footer from './footer'; // ajusta la ruta si es necesario
-import Principal from './Principal';
-import CrearCarrera from './CrearCarrera';
+import Footer from './footer';
 
-const Home = () => {
+const Principal = () => {
   return (
     <View style={styles.container}>
-        <CrearCarrera/>
       <View style={styles.content}>
+        <Text style={styles.title}>Pantalla Principal</Text>
       </View>
-      <Footer navigation={{ navigate: () => {} }} /> {/* Sustituye esto por el navigation real si usas react-navigation */}
     </View>
   );
 };
+
+import { useNavigation } from '@react-navigation/native';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,9 +25,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: 'bold',
   },
 });
 
-export default Home;
+export default Principal;
